@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WEBHTM's Parrot Videos</title>
+  <style>
+    :root {
+      --green-dark: #064e3b;
+      --green: #16a34a;
+      --green-light: #86efac;
+      --green-lighter: #bbf7d0;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background:
+        radial-gradient(80vw 80vw at -10% -10%, var(--green-lighter) 0%, transparent 60%),
+        radial-gradient(70vw 70vw at 110% 10%, var(--green-light) 0%, transparent 60%),
+        linear-gradient(180deg, #eafff0, #d1fae5);
+      color: var(--green-dark);
+    }
+
+    header {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    @media (max-width: 800px) {
+      .videos {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      text-align: center;
+      font-weight: 600;
+      padding: 0.7rem;
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      color: white;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .video-wrap {
+      position: relative;
+      flex: 1;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, rgba(22,163,74,.15), rgba(134,239,172,.2));
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🦜 WEBHTM's Parrot Videos 🦜</h1>
+  </header>
+
+  <main class="videos">
+    <div class="card">
+      <div class="title">Ringneck Parrot</div>
+      <div class="video-wrap">
+        <video controls preload="metadata">
+          <source src="https://ia800206.us.archive.org/30/items/ringneck-parrot-on-rock/Ringneck%20parrot%20on%20rock.mp4" type="video/mp4" />
+          Sorry, your browser doesn’t support videos.
+        </video>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">Parrots Chilling</div>
+      <div class="video-wrap">
+        <video controls preload="metadata">
+          <source src="https://ia600509.us.archive.org/7/items/parrots_202509/Parrots.mp4" type="video/mp4" />
+          Sorry, your browser doesn’t support videos.
+        </video>
+      </div>
+      
+    </div>
+    <div class="card">
+      <div class="title">Many Budgerigars</div>
+      <div class="video-wrap">
+        <video controls preload="metadata">
+          <source src="https://ia600903.us.archive.org/14/items/045481021-cage-many-multicolored-budgeri/045481021-cage-many-multicolored-budgeri.mp4" type="video/mp4" />
+          Sorry, your browser doesn’t support videos.
+        </video>
+      </div>
+      
+  </main>
+</body>
+</html>
